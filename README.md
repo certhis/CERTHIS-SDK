@@ -1,10 +1,12 @@
 # CERTHIS-SDK
-JS library for communicating with the Certhis API.
+JS library for communicating with the Certhis API. 
 
-✅ Get Data From API
-🔜 Creating Label , Deploying Collection From SDK  
-🔜 Mint NFT
-🔜 Buy NFT
+<a href="https://app.swaggerhub.com/apis-docs/CERTHIS.IO/certhis/1.0.0">API SERVICES</a>
+
+✅ Get Data From API<br />
+🔜 Creating Label , Deploying Collection From SDK  <br />
+🔜 Mint NFT<br />
+🔜 Buy NFT<br />
   
 
 ## Installation
@@ -133,4 +135,33 @@ Get User Statistics object by wallet_address
 
 ```js
 await certhis.stat.user(wallet_address);
+```
+
+
+#### Transactions
+
+Get Label Transaction object by label_index
+
+```js
+await certhis.transaction.label(label_index);
+```
+
+
+Get User Transaction object by wallet_address
+
+```js
+await certhis.transaction.user(wallet_address);
+```
+
+
+Get Collection Transaction object by collection_index
+
+```js
+await certhis.transaction.collection(collection_index);
+```
+
+Get NFT Transaction object by nft_id and collection_address
+
+```js
+await certhis.transaction.nft(nft_id,collection_address);
 ```
