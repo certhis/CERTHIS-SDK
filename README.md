@@ -1,6 +1,12 @@
 # CERTHIS-SDK
 JS library for communicating with the Certhis API.
 
+✅ Get Data From API
+🔜 Creating Label , Deploying Collection From SDK  
+🔜 Mint NFT
+🔜 Buy NFT
+  
+
 ## Installation
 
 ```sh
@@ -30,51 +36,101 @@ const Certhis = require('certhis').init();
 
 #### Label
 
-Get single Label object
+Get single Label object by label_index
 
 ```js
-await certhis.label.one(470);
+await certhis.label.one(label_index);
 ```
 
-Get List Label object
+Get List of Label Object  
 
 ```js
 await certhis.label.many(params);
 ```
 
-#### getEtherBalanceMulti
+#### Collection
 
-Get Ether balance for multiple addresses in a single call.
+Get single Collection object by collection_index
 
 ```js
-etherscan.getEtherBalanceMulti({
-    address: ['0x00', '0x01'],
-    tag: 'latest' // Optional, default 'latest'
-});
+await certhis.collection.one(collection_index);
 ```
 
-#### getTxList
-
-Get a list of `normal` transactions by address.
+Get List of Collection Object
 
 ```js
-etherscan.getTxList({
-    address: '0x00',
-    startblock: 0, // Optional
-    endblock: 0, // Optional
-    sort: 'desc' // Optional, default 'asc'
-});
+await certhis.collection.many(params);
 ```
 
-#### getTxListInternal
-
-Get a list of `internal` transactions by address.
+Get Attributes Collection List by collection_index
 
 ```js
-etherscan.getTxListInternal({
-    address: '0x00',
-    startblock: 0, // Optional
-    endblock: 0, // Optional
-    sort: 'desc' // Optional, default 'asc'
-});
+await certhis.collection.attributes(collection_index);
+```
+
+Get number of minted NFT on Collection by collection_index
+
+```js
+await certhis.collection.minted(collection_index);
+```
+
+
+#### Contract
+
+Get Single Contract Object by contract_id
+
+```js
+await certhis.contract.one(contract_id);
+```
+
+
+Get Full List of Available Contracts Object
+
+```js
+await certhis.contract.many();
+```
+
+#### NFT
+
+Get Single NFT Object by nft_id and collection_address
+
+```js
+await certhis.nft.one(nft_id,collection_address);
+```
+
+
+Get List of NFT Object
+
+```js
+await certhis.nft.many(params);
+```
+
+#### User
+
+Get Single User Object by wallet_address
+
+```js
+await certhis.user.one(wallet_address);
+```
+
+#### Statistics
+
+Get Label Statistics object by label_index
+
+```js
+await certhis.stat.label(label_index);
+```
+
+
+Get Collection Statistics object by collection_index
+
+```js
+ await certhis.stat.collection(collection_index);
+```
+
+
+Get User Statistics object by wallet_address
+
+```js
+await certhis.stat.user(wallet_address);
 ```
