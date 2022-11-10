@@ -1,7 +1,7 @@
 # CERTHIS-SDK
 JS library for communicating with the Certhis API. 
 
-<a href="https://app.swaggerhub.com/apis-docs/CERTHIS.IO/certhis/1.0.0">API SERVICES</a>
+<a href="https://app.swaggerhub.com/apis-docs/Certhis.IO/certhis/1.0.0">API SERVICES</a>
 
 ✅ Get Data From API<br />
 🔜 Creating Label , Deploying Collection From SDK  <br />
@@ -27,7 +27,7 @@ const Certhis = require('certhis').init();
 ```js
 const Certhis = require('certhis').init();
 (async () => {
-     const getLabel = await certhis.label.one(470);
+     const getLabel = await Certhis.label.one(470);
      console.log(getLabel);
 })();
 ```
@@ -41,13 +41,13 @@ const Certhis = require('certhis').init();
 Get single Label object by label_index
 
 ```js
-await certhis.label.one(label_index);
+await Certhis.label.one(label_index);
 ```
 
 Get List of Label Object  
 
 ```js
-await certhis.label.many(params);
+await Certhis.label.many(params);
 ```
 
 #### Collection
@@ -55,25 +55,25 @@ await certhis.label.many(params);
 Get single Collection object by collection_index
 
 ```js
-await certhis.collection.one(collection_index);
+await Certhis.collection.one(collection_index);
 ```
 
 Get List of Collection Object
 
 ```js
-await certhis.collection.many(params);
+await Certhis.collection.many(params);
 ```
 
 Get Attributes Collection List by collection_index
 
 ```js
-await certhis.collection.attributes(collection_index);
+await Certhis.collection.attributes(collection_index);
 ```
 
 Get number of minted NFT on Collection by collection_index
 
 ```js
-await certhis.collection.minted(collection_index);
+await Certhis.collection.minted(collection_index);
 ```
 
 
@@ -82,14 +82,14 @@ await certhis.collection.minted(collection_index);
 Get Single Contract Object by contract_id
 
 ```js
-await certhis.contract.one(contract_id);
+await Certhis.contract.one(contract_id);
 ```
 
 
 Get Full List of Available Contracts Object
 
 ```js
-await certhis.contract.many();
+await Certhis.contract.many();
 ```
 
 #### NFT
@@ -97,14 +97,14 @@ await certhis.contract.many();
 Get Single NFT Object by nft_id and collection_address
 
 ```js
-await certhis.nft.one(nft_id,collection_address);
+await Certhis.nft.one(nft_id,collection_address);
 ```
 
 
 Get List of NFT Object
 
 ```js
-await certhis.nft.many(params);
+await Certhis.nft.many(params);
 ```
 
 #### User
@@ -112,7 +112,7 @@ await certhis.nft.many(params);
 Get Single User Object by wallet_address
 
 ```js
-await certhis.user.one(wallet_address);
+await Certhis.user.one(wallet_address);
 ```
 
 #### Statistics
@@ -120,21 +120,21 @@ await certhis.user.one(wallet_address);
 Get Label Statistics object by label_index
 
 ```js
-await certhis.stat.label(label_index);
+await Certhis.stat.label(label_index);
 ```
 
 
 Get Collection Statistics object by collection_index
 
 ```js
- await certhis.stat.collection(collection_index);
+ await Certhis.stat.collection(collection_index);
 ```
 
 
 Get User Statistics object by wallet_address
 
 ```js
-await certhis.stat.user(wallet_address);
+await Certhis.stat.user(wallet_address);
 ```
 
 
@@ -143,25 +143,25 @@ await certhis.stat.user(wallet_address);
 Get Label Transaction object by label_index
 
 ```js
-await certhis.transaction.label(label_index);
+await Certhis.transaction.label(label_index);
 ```
 
 
 Get User Transaction object by wallet_address
 
 ```js
-await certhis.transaction.user(wallet_address);
+await Certhis.transaction.user(wallet_address);
 ```
 
 
 Get Collection Transaction object by collection_index
 
 ```js
-await certhis.transaction.collection(collection_index);
+await Certhis.transaction.collection(collection_index);
 ```
 
 Get NFT Transaction object by nft_id and collection_address
 
 ```js
-await certhis.transaction.nft(nft_id,collection_address);
+await Certhis.transaction.nft(nft_id,collection_address);
 ```
