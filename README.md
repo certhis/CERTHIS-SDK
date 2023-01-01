@@ -38,6 +38,12 @@ const Certhis = require('certhis').init();
 
 #### Label
 
+Create Label with Web3 (wallet loaded), contract object , wallet_address and label object
+
+```js
+await Certhis.label.create(web3,contract,wallet_address,label_object);
+```
+
 Get single Label object by label_index
 
 ```js
@@ -94,10 +100,10 @@ await Certhis.contract.many();
 
 #### NFT
 
-Get Single NFT Object by nft_id and collection_address
+Get Single NFT Object by nft_id , collection_address and chain_id
 
 ```js
-await Certhis.nft.one(nft_id,collection_address);
+await Certhis.nft.one(nft_id,collection_address,chain_id);
 ```
 
 

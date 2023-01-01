@@ -50,7 +50,7 @@ async function getManyContracts() {
 //nft 
 async function getOneNFT() {
 	var collection = await getOneCollection();
-	var getOneNFT = await certhis.nft.one(1,collection.collection_address);
+	var getOneNFT = await certhis.nft.one(0,collection.collection_address,collection.chain_id);
 	return getOneNFT;
 }
 
@@ -119,7 +119,7 @@ async function getTransactionNFT() {
 
 
 async function getData(){
-var get_data = await getTransactionNFT()
+var get_data = await getOneNFT()
 console.log(get_data)
 }
 getData()
