@@ -4,7 +4,8 @@ JS library for communicating with the Certhis API.
 <a href="https://app.swaggerhub.com/apis-docs/Certhis.IO/certhis/1.0.0">API SERVICES</a>
 
 ✅ Get Data From API<br />
-🔜 Creating Label , Deploying Collection From SDK  <br />
+✅ Creating Label<br />
+🔜 Deploying Collection From SDK  <br />
 🔜 Mint NFT<br />
 🔜 Buy NFT<br />
   
