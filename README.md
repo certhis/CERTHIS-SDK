@@ -117,7 +117,7 @@ Create Label with Web3 (wallet loaded), contract id  and label object
 
 ```js
 
-await  Certhis.label.create(connection_web3,contract_id,label_object);
+await  Certhis.label.create(connection_web3,contract_id,label_object,force_balance);
 
 ```
 
@@ -194,7 +194,10 @@ collection_type:  true,
 
 },
 
-whitelist_array
+whitelist_array,
+price_array,
+custom_sign,
+force_balance
 
 );
 
