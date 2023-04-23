@@ -385,7 +385,7 @@ Get NFT Transaction object by nft_id and collection_address
 
 ```js
 
-await  Certhis.transaction.nft(nft_id,collection_address);
+await  Certhis.transaction.nft(nft_id,collection_address,chain_id , offset_id);
 
 ```
 
