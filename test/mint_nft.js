@@ -20,14 +20,14 @@ async function MintNft(web3, mint_wallet, collection_id, nft) {
 async function launch() {
   var web3 = await getweb3(
     "0x883f9048236a7Ab0DB1e352fe27760830BcC53B9",
-    "https://polygon-mumbai.infura.io/v3/56e93ff3382e494782c4d6e2d8d1c902",
+    "https://rpc-mumbai.maticvigil.com",
     "0xc0afa1596a43442642db9be18378ce253d2d9539eb3474b87ff0d66bafb664a1"
   );
 
   var mint_wallet = "0x883f9048236a7Ab0DB1e352fe27760830BcC53B9";
 
   //nft object
-  var nft = await MintNft(web3, mint_wallet, 893, {
+  var nft = await MintNft(web3, mint_wallet, 1203, {
     nft_id: 0,
     collection_id: 0,
     owner_address: mint_wallet,
