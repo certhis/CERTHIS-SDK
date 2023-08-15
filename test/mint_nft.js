@@ -1,10 +1,13 @@
-const certhis = require("./../index").init();
+const CerthisWallet = require("./../../CERTHIS-WALLET/index");
+const certhis_wallet = CerthisWallet.init();
+const certhis = require("./../index").init(certhis_wallet.getWeb3(), "http://localhost:8787/");
 
-async function getweb3(wallet_address, rpc, wallet_pass) {
-  //wallet to init ex on mumbai
-  var wallet_address = wallet_address;
-  var web3 = await certhis.wallet.connect(rpc, wallet_pass);
-  return web3;
+async function initWalletConnection(rpc, wallet_pass) {
+  return new Promise(async (resolve, reject) => {
+    //wallet to init ex on mumbai
+    var web3 = await certhis.wallet.connect(rpc, wallet_pass);
+    resolve(web3);
+  });
 }
 
 async function MintNft(web3, mint_wallet, collection_id, nft) {
@@ -12,22 +15,23 @@ async function MintNft(web3, mint_wallet, collection_id, nft) {
     web3,
     mint_wallet,
     collection_id,
-    nft
+    nft,0,2
+
   );
   return nft_minted;
 }
 
 async function launch() {
-  var web3 = await getweb3(
-    "0x883f9048236a7Ab0DB1e352fe27760830BcC53B9",
-    "https://rpc-mumbai.maticvigil.com",
+  let web3Inject = await initWalletConnection(
+    "https://polygon-mumbai-bor.publicnode.com",
     "0xc0afa1596a43442642db9be18378ce253d2d9539eb3474b87ff0d66bafb664a1"
   );
 
   var mint_wallet = "0x883f9048236a7Ab0DB1e352fe27760830BcC53B9";
 
   //nft object
-  var nft = await MintNft(web3, mint_wallet, 1203, {
+
+  var nft = await MintNft(web3Inject, mint_wallet, 956, {
     nft_id: 0,
     collection_id: 0,
     owner_address: mint_wallet,
