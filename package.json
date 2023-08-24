@@ -9,6 +9,7 @@
   "author": "Certhis",
   "license": "ISC",
   "dependencies": {
+    "@truffle/hdwallet-provider": "^2.1.13",
     "axios": "^1.1.3",
     "merkletreejs": "^0.3.9"
   },
