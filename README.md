@@ -112,7 +112,7 @@ Deploy NFT collection on label
 
 ```js
 await Certhis.collection.create({
-  web3: web3Inject,
+  web3: Web3,
   collection_object: {
     collection_name: "Test Collection",
     collection_symbol: "TEST",
