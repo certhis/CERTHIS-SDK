@@ -8,7 +8,7 @@ The Certhis-SDK is a JavaScript library that enables developers to interact with
 
 ✅ Creating Account (label)<br  />
 
-✅ Deploying Collection From SDK <br  />
+✅ Create NFT Collection From SDK <br  />
 
 ✅ Mint NFT<br  />
 
@@ -22,17 +22,16 @@ $ npm i certhis
 
 ### Using CommonJS
 
-Requirements (Node.js >= 8.0.0).
+Requirements (Node.js >= 8.0.0) , WEBJS V4.0.1 .
 
 ```js
+const { Web3 } = require("web3");
 const Certhis = require("certhis").init();
 ```
 
 ## Usage
 
 ```js
-const Certhis = require("certhis").init();
-
 (async () => {
   const getLabel = await Certhis.label.one(470);
 
@@ -119,9 +118,7 @@ await Certhis.collection.create({
     collection_symbol: "TEST",
     collection_type: true,
   },
-
   whitelist: ["0x883f9048236a7Ab0DB1e352fe27760830BcC53B9"],
-  mulParam: 4,
 });
 ```
 
