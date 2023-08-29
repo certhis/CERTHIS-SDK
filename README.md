@@ -26,7 +26,7 @@ Requirements (Node.js >= 8.0.0) , WEBJS V4.0.1 .
 
 ```js
 const { Web3 } = require("web3");
-const Certhis = require("certhis").init();
+const Certhis = require("certhis").init(Web3);
 ```
 
 ## Usage
