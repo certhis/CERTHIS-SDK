@@ -9,25 +9,23 @@ async function connectionAndCreate() {
   );
 
   try {
-    var collection = await certhis.collection.create({
+    var label = await certhis.label.create({
       web3: web3Inject,
-      collection_object: {
-        collection_name: "Test Collection",
-        collection_symbol: "TEST",
-        collection_type: true,
+      label_object: {
+        label_id : 1,
+        creator_address: "0x883f9048236a7Ab0DB1e352fe27760830BcC53B9",
       },
-
-      whitelist: ["0x883f9048236a7Ab0DB1e352fe27760830BcC53B9"],
-      mulParam: 4,
+      mulParam: 2,
     });
-    console.log(collection);
+
+    return label;
   } catch (e) {
     console.log(e);
   }
 }
 
-async function createCollection() {
-  var collection = await connectionAndCreate();
-  console.log(collection);
+async function createLabel() {
+  var label = await connectionAndCreate();
+  console.log(label);
 }
-createCollection();
+createLabel();
