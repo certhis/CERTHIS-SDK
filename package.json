@@ -1,6 +1,6 @@
 {
   "name": "certhis",
-  "version": "1.5.7",
+  "version": "1.5.8",
   "description": "Certhis.io SDK",
   "main": "index.js",
   "scripts": {
