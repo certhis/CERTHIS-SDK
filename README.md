@@ -10,7 +10,7 @@ The Certhis-SDK is a JavaScript library that enables developers to interact with
 
 ✅ Create NFT Collection From SDK <br  />
 
-✅ Mint NFT<br  />
+✅ Mint NFT (2.94 s/NFT)<br  />
 
 ## Installation
 
