@@ -231,7 +231,7 @@ await Certhis.transaction.nft(nft_id, collection_address, chain_id, offset_id);
 Generate safe message signature from Certhis api
 
 ```js
-await Certhis.sign.sign(wallet_address);
+await Certhis.sign.sign(wallet_address,sign_header);
 ```
 
 Check safe signature from Certhis api
