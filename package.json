@@ -1,6 +1,6 @@
 {
   "name": "certhis",
-  "version": "1.6.9",
+  "version": "1.7.0",
   "description": "Certhis.io SDK",
   "main": "index.js",
   "scripts": {
@@ -26,7 +26,7 @@
     "url": "git+https://github.com/certhis/CERTHIS-SDK.git"
   },
   "keywords": [
-    "collection",
+    "collection", 
     "nft",
     "mint",
     "label",
