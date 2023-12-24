@@ -2,7 +2,7 @@
 
 The Certhis-SDK is a JavaScript library that enables developers to interact with the Certhis API, create accounts, deploy NFT collections, and mint NFTs.
 
-<a  href="https://app.swaggerhub.com/apis-docs/Certhis.IO/certhis/1.0.0">API SERVICES</a>
+<a  href="https://docs.certhis.io/get-started/introduction">Documentation</a>
 
 ✅ Get Data From API<br  />
 
