@@ -170,6 +170,7 @@ await await certhis.nft.mint({
   price_value: 0,
   mulParam: 2,
   disable_nonce:false,
+  custom_nonce:false,
 });
 ```
 
