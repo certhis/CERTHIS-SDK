@@ -123,6 +123,17 @@ await Certhis.collection.create({
 });
 ```
 
+**Transfer Ownership**
+```js
+await Certhis.collection.transferOwnership({
+  web3: Web3,
+  collection_index: 979,
+  new_owner: "0x883f9048236a7Ab0DB1e352fe27760830BcC53B9",
+});
+```
+
+
+
 ## Contract
 
 Get Single Contract Object by contract_id
