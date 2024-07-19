@@ -124,6 +124,7 @@ await Certhis.collection.create({
 ```
 
 **Transfer Ownership**
+
 ```js
 await Certhis.collection.transferOwnership({
   web3: Web3,
@@ -131,8 +132,6 @@ await Certhis.collection.transferOwnership({
   new_owner: "0x883f9048236a7Ab0DB1e352fe27760830BcC53B9",
 });
 ```
-
-
 
 ## Contract
 
@@ -242,14 +241,22 @@ await Certhis.transaction.nft(nft_id, collection_address, chain_id, offset_id);
 
 ## Signature
 
+Generate message signature from Certhis api
+
+```js
+await Certhis.sign.sign(wallet_address, sign_header);
+```
+
 Generate safe message signature from Certhis api
 
 ```js
-await Certhis.sign.sign(wallet_address,sign_header);
+await Certhis.sign.SafeSign(wallet_address, sign_header);
 ```
 
-Check safe signature from Certhis api
+Check signature from Certhis api
+
+( sign_id is optional )
 
 ```js
-await Certhis.sign.check(wallet_address, sign_message);
+await Certhis.sign.check(wallet_address, sign_message, sign_id);
 ```
