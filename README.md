@@ -254,7 +254,7 @@ await Certhis.sign.SafeSign(wallet_address, sign_header);
 ```
 
 Check signature from Certhis api
-
+ 
 ( sign_id is optional )
 
 ```js
